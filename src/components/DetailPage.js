@@ -1,16 +1,14 @@
-// 파일: DetailPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const DetailPage = () => {
-  const { id } = useParams(); // 수정된 부분: useParams를 사용하여 URL에서 id 가져오기
+  const { id } = useParams();
   const [parcel, setParcel] = useState(null);
 
   useEffect(() => {
     const fetchParcel = async () => {
       try {
-        // 수정된 부분: 해당 id로 Parcel 정보 가져오기
         const response = await axios.get(`https://67296bac6d5fa4901b6d14a6.mockapi.io/oss4-2/parcels/${id}`);
         setParcel(response.data);
       } catch (error) {

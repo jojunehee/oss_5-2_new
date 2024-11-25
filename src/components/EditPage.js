@@ -4,9 +4,9 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 
 const EditPage = () => {
-  const { id } = useParams(); // URL에서 id 가져오기
+  const { id } = useParams(); 
   const [parcel, setParcel] = useState(null);
-  const [editCount, setEditCount] = useState(0); // 총 수정 횟수 상태 변수 추가
+  const [editCount, setEditCount] = useState(0); // 총 수정 횟수
 
   // useRef를 각 필드에 사용
   const trackingNumberRef = useRef(null);
@@ -17,7 +17,7 @@ const EditPage = () => {
   const costRef = useRef(null);
 
   useEffect(() => {
-    // 해당 id로 Parcel 정보 가져오기
+    // 가져온 id로 Parcel 정보 가져오기 
     const fetchParcel = async () => {
       try {
         const response = await axios.get(`https://67296bac6d5fa4901b6d14a6.mockapi.io/oss4-2/parcels/${id}`);

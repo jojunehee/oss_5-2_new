@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -125,7 +124,7 @@ function App() {
           <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
 
-        {/* 수정 모달 */}
+        {/* 수정 모달 - 이제 사용 안함*/}
         {currentParcel && (
           <EditModal
             show={showModal}

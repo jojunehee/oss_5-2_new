@@ -15,7 +15,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
               type="text"
               className="form-control"
               name="tracking_number"
-              value={currentParcel?.tracking_number || ''} // Optional chaining 및 기본값 추가
+              value={currentParcel?.tracking_number || ''} 
               onChange={handleInputChange}
             />
           </div>
@@ -25,7 +25,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
               type="text"
               className="form-control"
               name="sender_name"
-              value={currentParcel?.sender_name || ''} // Optional chaining 및 기본값 추가
+              value={currentParcel?.sender_name || ''} 
               onChange={handleInputChange}
             />
           </div>
@@ -35,7 +35,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
               type="text"
               className="form-control"
               name="recipient_name"
-              value={currentParcel?.recipient_name || ''} // 기본값 추가
+              value={currentParcel?.recipient_name || ''} 
               onChange={handleInputChange}
             />
           </div>
@@ -45,7 +45,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
               type="text"
               className="form-control"
               name="recipient_address"
-              value={currentParcel?.recipient_address || ''} // 기본값 추가
+              value={currentParcel?.recipient_address || ''} 
               onChange={handleInputChange}
             />
           </div>
@@ -54,7 +54,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
             <select
               className="form-select"
               name="status"
-              value={currentParcel?.status || ''} // 기본값 추가
+              value={currentParcel?.status || ''}
               onChange={handleInputChange}
             >
               <option value="배송 준비">배송 준비</option>
@@ -69,7 +69,7 @@ function EditModal({ show, handleClose, handleInputChange, saveChanges, currentP
               type="number"
               className="form-control"
               name="cost"
-              value={currentParcel?.cost || ''} // 기본값 추가
+              value={currentParcel?.cost || ''}
               onChange={handleInputChange}
             />
           </div>

@@ -1,16 +1,14 @@
-// 파일: ParcelList.js
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function ParcelList({ parcels = [], handleShowModal, deleteParcel }) {
   const navigate = useNavigate();
 
-  // 수정된 부분: handleShowDetails 함수 추가
+
   const handleShowDetails = (parcel) => {
     navigate(`/detail/${parcel.id}`);
   };
-  // 수정된 부분: handleShowEdit 함수 추가
+
   const handleShowEdit = (parcel) => {
     navigate(`/update/${parcel.id}`);
   };
@@ -52,7 +50,6 @@ function ParcelList({ parcels = [], handleShowModal, deleteParcel }) {
                 </button>
                 <button
                   className="btn btn-info"
-                  // 수정된 부분: onClick에 handleShowDetails 연결
                   onClick={() => handleShowDetails(parcel)}
                 >
                   자세히
